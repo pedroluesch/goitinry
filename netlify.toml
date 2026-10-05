@@ -1,0 +1,19 @@
+# Site de apresentação do Itinry (www.goitinry.com). O app fica em app.goitinry.com.
+[build]
+  publish = "."
+
+# Atalhos para o app
+[[redirects]]
+  from = "/app"
+  to = "https://app.goitinry.com"
+  status = 302
+[[redirects]]
+  from = "/entrar"
+  to = "https://app.goitinry.com"
+  status = 302
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
